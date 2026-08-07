@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box; /* بيظبط أبعاد كل حاجة عشان متخرجش بره الشاشة */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* خلينا دي min-height بدل height عشان يسمح بالسكرول على الموبايل */
+  margin: 0;
+  padding: 20px 0; /* مسافة من فوق وتحت عشان الكلام ميبقاش لازق في حافة الشاشة */
+  background: linear-gradient(45deg, #cf0844, #f7f2f1);
+  overflow-x: hidden; /* بنمنع السكرول بالعرض بس لكن الطول شغال عادي */
+}
+
+.contener {
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.imgOne {
+  width: 150px; /* تصغير صورة الصفحة الأولى */
+  max-width: 100%;
+}
+
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 22px; /* خط مناسب للموبايل */
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* مسافة بين الزراير */
+  flex-wrap: wrap; /* لو الشاشة صغيرة الزراير تنزل تحت بعض */
+}
+
+button {
+  padding: 12px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#yes {
+  background-color: #d31f55;
+  color: #fff;
+}
+
+#no {
+  background-color: #d31f55;
+  color: #fff;
+  transition: top 0.2s, left 0.2s; /* حركة ناعمة لما الزرار يهرب */
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* تنسيق الصفحة التانية (الصورة فوق والكلام تحت) */
+.love-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.love-image-img {
+  width: 250px; /* حجم الصورة التانية */
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.love-text h2 {
+  font-size: 18px; /* تصغير خط الكلام الطويل عشان يتقري بسهولة */
+}
